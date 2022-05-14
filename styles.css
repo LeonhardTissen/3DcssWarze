@@ -1,6 +1,12 @@
+@font-face {
+	src: url(junegull.ttf);
+	font-family: "junegull";
+}
 body {
 	text-align: center;
 	background: black;
+	overflow: hidden;
+	font-family: "junegull";
 }
 container {
 	background: linear-gradient(to bottom, #000, #555);
@@ -57,12 +63,29 @@ shadow {
 	}
 }
 tophat {
-	animation: tophat 1s ease-in-out infinite;
+	animation: tophat 1s ease-in-out infinite, tophatrotate 2s ease-in-out infinite;
+	width: 270px;
+	height: 160px;
+	transform-origin: bottom;
+	left: 120px;
 }
 @keyframes tophat {
 	0% {}
 	50% {
-		transform: translateY(35px);
+		transform: translateY(40px);
+	}
+	100% {}
+}
+@keyframes tophatrotate {
+	0% {}
+	25% {
+		transform: rotateZ(10deg) translate(15px, 50px);
+	}
+	50% {
+		transform: rotateZ(0deg) translate(0px, 0px)
+	}
+	80% {
+		transform: rotateZ(-10deg) translate(-20px, 20px);
 	}
 	100% {}
 }
@@ -157,4 +180,9 @@ pupil {
 }
 eye.right pupil {
 	left: 2px;
+}
+h1 {
+	color: white;
+	margin: 0;
+	font-size: min(100px, 10vw);
 }
