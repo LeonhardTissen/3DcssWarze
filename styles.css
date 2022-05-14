@@ -181,7 +181,7 @@ pupil {
 eye.right pupil {
 	left: 2px;
 }
-h1 {
+span {
 	color: white;
 	margin: 0;
 	font-size: min(100px, 10vw);
