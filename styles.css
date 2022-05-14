@@ -1,0 +1,160 @@
+body {
+	text-align: center;
+	background: black;
+}
+container {
+	background: linear-gradient(to bottom, #000, #555);
+	width: 500px;
+	height: 500px;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	border-radius: 40%;
+}
+container * {
+	position: absolute;
+}
+warze {
+	background-color: red;
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	left: calc(50% - 125px);
+	top: 200px;
+	box-shadow: inset -60px -60px 60px #0008, inset 0px 40px 60px #0006;
+	animation: warze 1s ease-in-out infinite;
+}
+@keyframes warze {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2,0.8) translateY(35px);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+shadow {
+	background-color: #0007;
+	filter: blur(10px);
+	width: 250px;
+	height: 100px;
+	border-radius: 50%;
+	left: calc(50% - 125px);
+	top: 390px;
+	animation: shadow 1s ease-in-out infinite;
+}
+@keyframes shadow {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.1,1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+tophat {
+	animation: tophat 1s ease-in-out infinite;
+}
+@keyframes tophat {
+	0% {}
+	50% {
+		transform: translateY(35px);
+	}
+	100% {}
+}
+tophatbase {
+	background-color: #111;
+	width: 270px;
+	height: 100px;
+	border-radius: 50%;
+	left: calc(50% - 135px);
+	top: 150px;
+	box-shadow: 0px 10px 0px black, 0px 20px 0px black;
+	animation: tophatbase 2s ease-in-out infinite;
+}
+tophatbase::after {
+	background-color: red;
+}
+@keyframes tophatbase {
+	0% {}
+	25% {
+		height: 80px;
+		width: 260px;
+		left: calc(50% - 130px);
+	}
+	50% {}
+	75% {
+		height: 120px;
+		width: 280px;
+		left: calc(50% - 140px);
+	}
+	100% {}
+}
+tophattop {
+	background-color: #111;
+	width: 140px;
+	height: 50px;
+	border-radius: 50%;
+	left: calc(50% - 70px);
+	top: 50px;
+	box-shadow: 0px 10px 0px black, 0px 20px 0px black, 0px 30px 0px black, 0px 40px 0px black, 0px 50px 0px black, 0px 60px 0px black, 0px 70px 0px black, 0px 80px 0px black, 0px 90px 0px black, 0px 100px 0px black, 0px 110px 0px black, 0px 120px 0px black;
+	animation: tophattop 2s ease-in-out infinite;
+}
+@keyframes tophattop {
+	0% {}
+	25% {
+		height: 45px;
+		width: 130px;
+		left: calc(50% - 65px);
+		transform: translateY(-5px);
+	}
+	50% {}
+	75% {
+		height: 55px;
+		width: 150px;
+		left: calc(50% - 75px);
+		transform: translateY(13px);
+	}
+	100% {}
+}
+eye {
+	border-radius: 50%;
+	background-color: white;
+	width: 90px;
+	height: 90px;
+	top: 300px;
+	left: 155px;
+	box-shadow: inset 0px -10px 20px #0007;
+	animation: eye 2s ease-in-out infinite;
+}
+eye.right {
+	left: 255px;
+}
+@keyframes eye {
+	0% {}
+	25% {
+		transform: translate(0px,-15px) scale(1.1,0.9);
+	}
+	50% {
+		transform: scale(1,1)
+	}
+	75% {
+		transform: translate(0px,15px) scale(1.1,0.95);
+	}
+	100% {}
+}
+pupil {
+	border-radius: 50%;
+	background: radial-gradient(#222, #000);
+	width: 50px;
+	height: 60px;
+	top: 15px;
+	left: 38px;
+}
+eye.right pupil {
+	left: 2px;
+}
