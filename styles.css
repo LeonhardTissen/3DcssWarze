@@ -137,13 +137,13 @@ eye.right {
 @keyframes eye {
 	0% {}
 	25% {
-		transform: translate(0px,-15px) scale(1.1,0.9);
+		transform: translate(0px,5px);
 	}
 	50% {
 		transform: scale(1,1)
 	}
 	75% {
-		transform: translate(0px,15px) scale(1.1,0.95);
+		transform: translate(0px,20px);
 	}
 	100% {}
 }
