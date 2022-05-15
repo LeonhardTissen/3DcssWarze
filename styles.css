@@ -184,5 +184,13 @@ eye.right pupil {
 span {
 	color: white;
 	margin: 0;
-	font-size: min(100px, 10vw);
+	font-size: min(80px, 8vw);
+}
+input[type=color] {
+	width: 50px;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: 0;
 }

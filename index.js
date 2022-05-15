@@ -29,10 +29,17 @@ function writeDialogueText(string) {
 }
 
 async function startDialogueProcess() {
-	await writeDialogueText("Hello there")
-	await writeDialogueText("Cool animation")
-	await writeDialogueText("Look at him go")
-	await writeDialogueText("Aight thanks")
+	await writeDialogueText("Please pick some colors")
 }
 
 startDialogueProcess();
+
+function setColor(value) {
+	document.querySelector('warze').style.backgroundColor = value;
+}
+function setEyeColor(value) {
+	document.querySelectorAll('pupil').forEach(elem => elem.style.background = 'radial-gradient(' + value + ', #000)')
+}
+function setBackColor(value) {
+	document.querySelector('container').style.background = 'linear-gradient(to bottom, #000, ' + value + ')'
+}
