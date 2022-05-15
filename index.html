@@ -7,27 +7,35 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+	<canvas id="spaceBackground"></canvas>
+	<div id="spaceGalaxies"></div>
+	<div id="spacePlanets"></div>
 	<container>
 		<shadow></shadow>
 		<warze>
 		</warze>
-		<eye>
-			<pupil></pupil>
-		</eye>
-		<eye class="right">
-			<pupil></pupil>
-		</eye>
+		<eyes>
+			<eye class="left">
+				<pupil></pupil>
+			</eye>
+			<eye class="right">
+				<pupil></pupil>
+			</eye>
+		</eyes>
 		<tophat>
 			<tophatbase></tophatbase>
 			<tophattop></tophattop>
 		</tophat>
 	</container>
-	<br>
-	<span id="textDialogue"></span>
-	<br>
-	<input type="color" value="#FF0000" oninput="setColor(this.value);">
-	<input type="color" value="#222222" oninput="setEyeColor(this.value);">
-	<input type="color" value="#555555" oninput="setBackColor(this.value);">
+	<div class="options">
+		<br>
+		<span id="textDialogue"></span>
+		<br>
+		<input type="color" value="#FF0000" oninput="setColor(this.value);">
+		<input type="color" value="#222222" oninput="setEyeColor(this.value);">
+		<input type="color" value="#555555" oninput="setBackColor(this.value);">
+	</div>
+	<script type="text/javascript" src="spaceBackground.js"></script>
 	<script type="text/javascript" src="index.js"></script>
 </body>
 </html>

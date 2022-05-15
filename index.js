@@ -18,7 +18,7 @@ function writeDialogueText(string) {
 				writtenLetters ++;
 				dialogue.innerHTML += " "
 			}
-			dialogue.innerHTML += `<span style="text-shadow:4px 0px ${calcRainbow(writtenLetters)}">${string[writtenLetters]}</span`
+			dialogue.innerHTML += `<span style="text-shadow:0.3vw 0px ${calcRainbow(writtenLetters)}">${string[writtenLetters]}</span`
 			writtenLetters ++;
 			if (writtenLetters == string.length) {
 				clearInterval(interval);
@@ -41,5 +41,10 @@ function setEyeColor(value) {
 	document.querySelectorAll('pupil').forEach(elem => elem.style.background = 'radial-gradient(' + value + ', #000)')
 }
 function setBackColor(value) {
-	document.querySelector('container').style.background = 'linear-gradient(to bottom, #000, ' + value + ')'
+	document.querySelector('container').style.background = 'linear-gradient(to bottom, #0008, ' + value + '88)'
+}
+
+const default_colors = ["#FF0000","#222222","#555555"];
+for (var i = 0; i < 3; i ++) {
+	document.querySelectorAll('input')[i].value = default_colors[i]
 }

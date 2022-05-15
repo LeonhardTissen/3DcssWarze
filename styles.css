@@ -9,13 +9,14 @@ body {
 	font-family: "junegull";
 }
 container {
-	background: linear-gradient(to bottom, #000, #555);
+	background: linear-gradient(to bottom, #0008, #5558);
 	width: 500px;
 	height: 500px;
 	position: relative;
 	display: inline-block;
 	text-align: center;
 	border-radius: 40%;
+	transform-origin: top left;
 }
 container * {
 	position: absolute;
@@ -144,15 +145,36 @@ tophattop {
 	}
 	100% {}
 }
+eyes {
+	width: 100%;
+	position: absolute;
+	left: 0;
+	animation: eyes 2s ease-in-out infinite;
+}
+@keyframes eyes {
+	0% {}
+	25% {
+		transform: rotateZ(3deg);
+	}
+	50% {
+		transform: rotateZ(0deg);
+	}
+	75% {
+		transform: rotateZ(-4deg);
+	}
+	100% {}
+}
 eye {
 	border-radius: 50%;
 	background-color: white;
 	width: 90px;
 	height: 90px;
 	top: 300px;
-	left: 155px;
 	box-shadow: inset 0px -10px 20px #0007;
 	animation: eye 2s ease-in-out infinite;
+}
+eye.left {
+	left: 155px;
 }
 eye.right {
 	left: 255px;
@@ -180,6 +202,11 @@ pupil {
 }
 eye.right pupil {
 	left: 2px;
+}
+.options {
+	position:absolute;
+	width:100%;
+	
 }
 span {
 	color: white;
